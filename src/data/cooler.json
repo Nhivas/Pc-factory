@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Noctua NH-D15",
+      "price": "$99",
+      "spec": "Dual-tower design, 6 heatpipes, 2x NF-A15 140mm fans",
+      "image": "https://example.com/cooler_images/nh_d15.jpg"
+    },
+    {
+      "name": "Corsair H100i RGB Platinum SE",
+      "price": "$159",
+      "spec": "240mm radiator, RGB lighting, 2x ML120 RGB PWM fans",
+      "image": "https://example.com/cooler_images/h100i_platinum_se.jpg"
+    },
+    {
+      "name": "Cooler Master Hyper 212 RGB Black Edition",
+      "price": "$49",
+      "spec": "4 heat pipes, Direct Contact Technology, 120mm RGB fan",
+      "image": "https://example.com/cooler_images/hyper_212_rgb_black.jpg"
+    },
+    {
+      "name": "be quiet! Dark Rock Pro 4",
+      "price": "$89",
+      "spec": "Dual-tower design, 7 heatpipes, 2x Silent Wings 3 120mm fans",
+      "image": "https://example.com/cooler_images/dark_rock_pro_4.jpg"
+    },
+    {
+      "name": "NZXT Kraken X63",
+      "price": "$139",
+      "spec": "280mm radiator, Aer P 140mm PWM fan, RGB lighting",
+      "image": "https://example.com/cooler_images/kraken_x63.jpg"
+    },
+    {
+      "name": "ARCTIC Freezer 34 eSports DUO",
+      "price": "$39",
+      "spec": "Dual-fan design, 4 heatpipes, 2x BioniX P120 PWM fans",
+      "image": "https://example.com/cooler_images/freezer_34_duo.jpg"
+    },
+    {
+      "name": "Deepcool GAMMAXX 400 V2 Blue",
+      "price": "$29",
+      "spec": "4 heat pipes, 120mm blue LED PWM fan, Direct Contact Technology",
+      "image": "https://example.com/cooler_images/gammaxx_400_v2_blue.jpg"
+    },
+    {
+      "name": "Thermaltake UX100 ARGB Lighting",
+      "price": "$19",
+      "spec": "Low-profile design, 120mm ARGB fan, Aluminum heatsink",
+      "image": "https://example.com/cooler_images/ux100_argb_lighting.jpg"
+    },
+    {
+      "name": "CRYORIG H7 Tower Cooler",
+      "price": "$49",
+      "spec": "3 heat pipes, 120mm PWM fan, Jet Fin Acceleration System",
+      "image": "https://example.com/cooler_images/h7_tower_cooler.jpg"
+    },
+    {
+      "name": "ID-COOLING SE-224-XT RGB",
+      "price": "$29",
+      "spec": "4 heat pipes, 120mm RGB fan, Direct Contact Technology",
+      "image": "https://example.com/cooler_images/se_224_xt_rgb.jpg"
+    }
+  ]
+  
