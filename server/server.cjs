@@ -7,22 +7,19 @@ const session = require('express-session');
 
 
 
-
-// Middleware
-
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use(session({
-  secret: 'vengeance', // replace with your secret key
+  secret: 'vengeance', 
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false } // set to true if using HTTPS
+  cookie: { secure: false } 
 }));
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://nhivas:2004@cluster0.oqy28dm.mongodb.net/PC_factory', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://nhivas:2004@cluster0.oqy28dm.mongodb.net/PC_factory')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Error connecting to MongoDB:', err));
 
