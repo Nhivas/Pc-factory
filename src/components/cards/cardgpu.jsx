@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
-import ModalGpu from './modalgpu';
-import '../styles/card.css';
-import GPUs from '../data/gpu.json';
+import ModalGpu from '../modals/modalgpu';
+import '../../styles/card.css';
+import GPUs from '../../data/gpu.json';
+import Total from '../total';
 
-export const CardGpu = () => {
+export const CardGpu = ({ onSelectComponent }) => {
   const [selectedGPU, setSelectedGPU] = useState(null);
 
   const handleGPUSelect = (gpu) => {
     setSelectedGPU(gpu);
+    onSelectComponent('gpu', {
+      ...gpu,
+      price: parseInt(gpu.price.replace('$', ''), 10),
+    });
   };
 
   return (
@@ -23,12 +28,13 @@ export const CardGpu = () => {
           {selectedGPU ? (<>
             <p>
               Selected: {selectedGPU.name}<br></br>
-              Price: {selectedGPU.price}
+              <b>Price: {selectedGPU.price}</b>
             </p>
             <ModalGpu handleGPUSelect={handleGPUSelect} GPUs={GPUs} isChangeButton={true} />
              </> 
-        
+          
           ) : null}
+          
         </div>
       </div>
     </div>

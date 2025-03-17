@@ -1,62 +1,71 @@
-// src/components/BuildPC.jsx
 import React, { useState } from 'react';
-import Footer from './Footer';
-import '../styles/buildpc.css';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
-import { Card } from './card';
-import { CardRam } from './cardram';
-import { CardMb } from './cardmb';
-import { CardGpu } from './cardgpu';
+import Footer from './Footer';
+import { Card } from './cards/card';
+import { CardRam } from './cards/cardram';
+import { CardMb } from './cards/cardmb';
+import { CardGpu } from './cards/cardgpu';
+import { CardCooler } from './cards/cardcool';
+import { CardSsd } from './cards/cardssd';
+import { CardCab } from './cards/cardcab';
+import { CardSmps } from './cards/cardsmps';
+import '../styles/buildpc.css';
 
 const BuildPC = () => {
   const [selectedComponents, setSelectedComponents] = useState({
-    cpu: '',
-    motherboard: '',
-    ram: '',
-    gpu: '',
-    cooler: '',
-    ssd: '',
-    cabinet: '',
-    smps: ''
+    cpu: null,
+    motherboard: null,
+    ram: null,
+    gpu: null,
+    cooler: null,
+    ssd: null,
+    cabinet: null,
+    smps: null,
+    total: 0,
   });
 
+  const navigate = useNavigate();
+
   const handleSelectComponent = (componentName, value) => {
-    setSelectedComponents(prevState => ({ ...prevState, [componentName]: value }));
+    setSelectedComponents(prevState => {
+      const previousPrice = prevState[componentName]?.price || 0;
+      const newTotal = prevState.total - previousPrice + value.price;
+      return {
+        ...prevState,
+        [componentName]: value,
+        total: newTotal,
+      };
+    });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      // Send selectedComponents to backend API to save to PC collection
-      const response = await axios.post('http://localhost:5000/api/pc', selectedComponents);
-      console.log(response.data); // Log response from server
-      // Reset selectedComponents after successful submission
-      setSelectedComponents({
-        cpu: '',
-        motherboard: '',
-        ram: '',
-        gpu: '',
-        cooler: '',
-        ssd: '',
-        cabinet: '',
-        smps: ''
-      });
-    } catch (error) {
-      console.error('Error:', error);
+  const handleAddParts = () => {
+    // Check if any components are selected
+    const { cpu, motherboard, ram, gpu, cooler, ssd, cabinet, smps } = selectedComponents;
+    if (!cpu && !motherboard && !ram && !gpu && !cooler && !ssd && !cabinet && !smps) {
+      alert('Please select at least one component before proceeding.');
+      return;
     }
+    navigate('/confirm-order', { state: { selectedComponents } });
   };
 
   return (
     <>
       <Header />
-        <div className="cards">
-        <Card/>
-        <CardMb/>
-        <CardRam/>
-        <CardGpu/>
-        </div>
-
+      <div className="cards">
+        <Card onSelectComponent={handleSelectComponent} />
+        <CardMb onSelectComponent={handleSelectComponent} />
+        <CardRam onSelectComponent={handleSelectComponent} />
+        <CardGpu onSelectComponent={handleSelectComponent} />
+        <CardCooler onSelectComponent={handleSelectComponent} />
+        <CardSsd onSelectComponent={handleSelectComponent} />
+        <CardCab onSelectComponent={handleSelectComponent} />
+        <CardSmps onSelectComponent={handleSelectComponent} />
+      </div>
+      <div className='total'>
+        <div className="price">Total Price: ${selectedComponents.total}</div>
+        <div className="addp"><button onClick={handleAddParts}>+ Add Parts</button></div>
+      </div>
     </>
   );
 };

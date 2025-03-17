@@ -45,24 +45,9 @@
         "socket": "LGA1700",
         "tdp": "125W"
       },
-      "image": "https://example.com/cpu_images/core_i7_12700k.jpg"
+      "image": "https://m.media-amazon.com/images/I/51GYVerUgML.jpg"
     },
-    {
-      "name": "AMD Ryzen 7 5800X",
-      "model": "5800X",
-      "generation": 4,
-      "price": "$449",
-      "specs": {
-        "cores": 8,
-        "threads": 16,
-        "base_clock": "3.8 GHz",
-        "boost_clock": "4.7 GHz",
-        "cache": "32MB",
-        "socket": "AM4",
-        "tdp": "105W"
-      },
-      "image": "https://m.media-amazon.com/images/I/61IIbwz-+ML._AC_UF1000,1000_QL80_.jpg"
-    },
+   
     {
       "name": "Intel Core i5-12600K",
       "model": "12600K",

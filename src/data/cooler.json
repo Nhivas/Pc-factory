@@ -1,63 +1,102 @@
 [
-    {
-      "name": "Noctua NH-D15",
-      "price": "$99",
-      "spec": "Dual-tower design, 6 heatpipes, 2x NF-A15 140mm fans",
-      "image": "https://example.com/cooler_images/nh_d15.jpg"
+  {
+    "name": "Noctua NH-D15",
+    "price": "$99",
+    "specs": {
+      "design": "Dual-tower",
+      "heatpipes": "6",
+      "fans": "2x NF-A15 140mm"
     },
-    {
-      "name": "Corsair H100i RGB Platinum SE",
-      "price": "$159",
-      "spec": "240mm radiator, RGB lighting, 2x ML120 RGB PWM fans",
-      "image": "https://example.com/cooler_images/h100i_platinum_se.jpg"
+    "image": "https://example.com/cooler_images/nh_d15.jpg"
+  },
+  {
+    "name": "Corsair H100i RGB Platinum SE",
+    "price": "$159",
+    "specs": {
+      "radiator": "240mm",
+      "lighting": "RGB",
+      "fans": "2x ML120 RGB PWM"
     },
-    {
-      "name": "Cooler Master Hyper 212 RGB Black Edition",
-      "price": "$49",
-      "spec": "4 heat pipes, Direct Contact Technology, 120mm RGB fan",
-      "image": "https://example.com/cooler_images/hyper_212_rgb_black.jpg"
+    "image": "https://example.com/cooler_images/h100i_platinum_se.jpg"
+  },
+  {
+    "name": "Cooler Master Hyper 212 RGB Black Edition",
+    "price": "$49",
+    "specs": {
+      "heatpipes": "4",
+      "technology": "Direct Contact",
+      "fan": "120mm RGB"
     },
-    {
-      "name": "be quiet! Dark Rock Pro 4",
-      "price": "$89",
-      "spec": "Dual-tower design, 7 heatpipes, 2x Silent Wings 3 120mm fans",
-      "image": "https://example.com/cooler_images/dark_rock_pro_4.jpg"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4k-hfMFipHrLpiTbfcuGDxU1tjVHVJ7r4AA&s"
+  },
+  {
+    "name": "be quiet! Dark Rock Pro 4",
+    "price": "$89",
+    "specs": {
+      "design": "Dual-tower",
+      "heatpipes": "7",
+      "fans": "2x Silent Wings 3 120mm"
     },
-    {
-      "name": "NZXT Kraken X63",
-      "price": "$139",
-      "spec": "280mm radiator, Aer P 140mm PWM fan, RGB lighting",
-      "image": "https://example.com/cooler_images/kraken_x63.jpg"
+    "image": "https://m.media-amazon.com/images/I/717-WYS+PcL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "name": "NZXT Kraken X63",
+    "price": "$139",
+    "specs": {
+      "radiator": "280mm",
+      "fan": "Aer P 140mm PWM",
+      "lighting": "RGB"
     },
-    {
-      "name": "ARCTIC Freezer 34 eSports DUO",
-      "price": "$39",
-      "spec": "Dual-fan design, 4 heatpipes, 2x BioniX P120 PWM fans",
-      "image": "https://example.com/cooler_images/freezer_34_duo.jpg"
+    "image": "https://example.com/cooler_images/kraken_x63.jpg"
+  },
+  {
+    "name": "ARCTIC Freezer 34 eSports DUO",
+    "price": "$39",
+    "specs": {
+      "design": "Dual-fan",
+      "heatpipes": "4",
+      "fans": "2x BioniX P120 PWM"
     },
-    {
-      "name": "Deepcool GAMMAXX 400 V2 Blue",
-      "price": "$29",
-      "spec": "4 heat pipes, 120mm blue LED PWM fan, Direct Contact Technology",
-      "image": "https://example.com/cooler_images/gammaxx_400_v2_blue.jpg"
+    "image": "https://example.com/cooler_images/freezer_34_duo.jpg"
+  },
+  {
+    "name": "Deepcool GAMMAXX 400 V2 Blue",
+    "price": "$29",
+    "specs": {
+      "heatpipes": "4",
+      "fan": "120mm blue LED PWM",
+      "technology": "Direct Contact"
     },
-    {
-      "name": "Thermaltake UX100 ARGB Lighting",
-      "price": "$19",
-      "spec": "Low-profile design, 120mm ARGB fan, Aluminum heatsink",
-      "image": "https://example.com/cooler_images/ux100_argb_lighting.jpg"
+    "image": "https://example.com/cooler_images/gammaxx_400_v2_blue.jpg"
+  },
+  {
+    "name": "Thermaltake UX100 ARGB Lighting",
+    "price": "$19",
+    "specs": {
+      "design": "Low-profile",
+      "fan": "120mm ARGB",
+      "heatsink": "Aluminum"
     },
-    {
-      "name": "CRYORIG H7 Tower Cooler",
-      "price": "$49",
-      "spec": "3 heat pipes, 120mm PWM fan, Jet Fin Acceleration System",
-      "image": "https://example.com/cooler_images/h7_tower_cooler.jpg"
+    "image": "https://example.com/cooler_images/ux100_argb_lighting.jpg"
+  },
+  {
+    "name": "CRYORIG H7 Tower Cooler",
+    "price": "$49",
+    "specs": {
+      "heatpipes": "3",
+      "fan": "120mm PWM",
+      "system": "Jet Fin Acceleration"
     },
-    {
-      "name": "ID-COOLING SE-224-XT RGB",
-      "price": "$29",
-      "spec": "4 heat pipes, 120mm RGB fan, Direct Contact Technology",
-      "image": "https://example.com/cooler_images/se_224_xt_rgb.jpg"
-    }
-  ]
-  
+    "image": "https://example.com/cooler_images/h7_tower_cooler.jpg"
+  },
+  {
+    "name": "ID-COOLING SE-224-XT RGB",
+    "price": "$29",
+    "specs": {
+      "heatpipes": "4",
+      "fan": "120mm RGB",
+      "technology": "Direct Contact"
+    },
+    "image": "https://example.com/cooler_images/se_224_xt_rgb.jpg"
+  }
+]

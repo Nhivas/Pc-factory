@@ -13,14 +13,13 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://localhost:5000/api/login', { username, password });
-            console.log(response.data.message);
-            // Redirect to homepage upon successful login
-            window.location.href = '/buildpc';
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+            window.location.href = '/home';
         } catch (error) {
             setError('Invalid username or password');
         }
     };
-
     return (
         <>
         <div className="logForm">

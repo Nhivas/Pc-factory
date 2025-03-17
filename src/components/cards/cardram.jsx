@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import ModalRam from './modalram';
-import '../styles/card.css';
-import RAMs from '../data/ram.json';
+import ModalRam from '../modals/modalram';
+import '../../styles/card.css';
+import RAMs from '../../data/ram.json';
 
-export const CardRam = () => {
+export const CardRam = ({ onSelectComponent }) => {
   const [selectedRAM, setSelectedRAM] = useState(null);
 
   const handleRAMSelect = (ram) => {
     setSelectedRAM(ram);
+    onSelectComponent('ram', {
+      ...ram,
+      price: parseInt(ram.price.replace('$', ''), 10),
+    });
   };
-
   return (
     <div className="container">
       <h2>RAM</h2>
@@ -29,8 +32,9 @@ export const CardRam = () => {
              </> 
         
           ) : null}
+          
         </div>
       </div>
     </div>
   );
-}
+};
